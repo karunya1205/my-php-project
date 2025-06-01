@@ -1,0 +1,6 @@
+<?php
+$conn = new mysqli("localhost", "root", "1234", "blog");
+$id = $_GET['id'];
+$conn->query("DELETE FROM posts WHERE id=$id");
+header("Location: read_posts.php");
+?>
